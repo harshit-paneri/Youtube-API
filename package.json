@@ -11,8 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/gapi": "^0.0.43",
     "@types/mongoose": "^5.11.97",
     "express": "^4.18.2",
+    "gapi": "^0.0.3",
+    "googleapis": "^109.0.1",
     "mongoose": "^6.8.0"
   },
   "devDependencies": {
