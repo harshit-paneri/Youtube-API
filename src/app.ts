@@ -1,10 +1,10 @@
-import express from "express" ;
+import express, { Application } from "express" ;
 
-const app = express();
-const port = 4000;
+const app : Application = express();
+const port: number = 4000;
 
-app.get('/', (req, res)=>{
-    res.send("hello TypeScript");
+app.get('/', (req , res)=>{
+    res.send("Helloo TypeScript");
 });
 
 app.listen(port, ()=>{
