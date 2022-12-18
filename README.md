@@ -52,8 +52,8 @@ http://localhost:4000
 
 - VS CODE
 you can change variable ``Search="<Type your String>"``.
-![code_harshit](https://github.com/harshit-paneri/Youtube-API/blob/main/code_harshit.jpeg)
-<img src = "https://github.com/harshit-paneri/Youtube-API/blob/main/code_harshit.jpeg">
+![code_harshit](image/code_harshit.jpeg)
+
 
 - Postman Result
 This is the postman result you can try with link :
