@@ -6,9 +6,15 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
 ## Installation Instructions
 
 - Clone this project :
+
+```
+https://github.com/harshit-paneri/Youtube-API.git
+```
+- Change Directory 
   ```
   cd YT-API-JS/YT-API-TS
   ```
+- Install Node Packages   
   ```
   npm i
   ```
