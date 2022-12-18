@@ -8,7 +8,7 @@ import {user} from "./database";
 function fetchAndSave() {
 	google.youtube("v3")
 		.search.list({
-			key: `AIzaSyBHx5sqpUeZ_F0PhnHLMgUJNfe_cSpkWgc`,
+			key: `<API>`,
 			maxResults: 10,
 			order: "date",
 			publishedAfter: "2020-01-01T00:00:00Z",

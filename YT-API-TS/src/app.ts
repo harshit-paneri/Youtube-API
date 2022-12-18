@@ -16,7 +16,7 @@ app.get('/', (req , res)=>{
 
 async function run() {
     // 4. Connect to MongoDB
-    await mongoose.connect('mongodb+srv://harshit:harshit@cluster0.3w1rx5w.mongodb.net/?retryWrites=true&w=majority/testing_db');
+    await mongoose.connect('<MONGO_DB_URL>');
     console.log("Connected to mongo")
 }
 

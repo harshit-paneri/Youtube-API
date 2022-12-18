@@ -2,17 +2,18 @@
   "name": "medbikri",
   "version": "1.0.0",
   "description": "",
-  "main": "data.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.0",
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.17.3",
-    "googleapis": "^100.0.0",
     "mongoose": "^6.3.0"
   }
 }
