@@ -1,10 +1,12 @@
 import express, { Application } from "express" ;
 const mongoose =require('mongoose')
-import {user} from './database'
+import {user} from './database';
 import { fetchAndSave, getYVideos } from "./fetch_save";
 
 const app : Application = express();
 const port: number = 4000;
+
+
 
 app.get('/', (req , res)=>{
     res.send("Helloo TypeScript");

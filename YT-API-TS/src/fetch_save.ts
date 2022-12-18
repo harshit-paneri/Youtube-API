@@ -2,13 +2,13 @@ import { google } from "googleapis";
 import {user} from "./database";
 
 // Variable to keep the index of the current API key
-let apiKeyIndex: number = 0;
+
 
 // Fetching youtube videos and saving them to the database
 function fetchAndSave() {
 	google.youtube("v3")
 		.search.list({
-			key: `AIzaSyBHx5sqpUeZ_F0PhnHLMgUJNfe_cSpkWgc`.split(",")[apiKeyIndex],
+			key: `AIzaSyBHx5sqpUeZ_F0PhnHLMgUJNfe_cSpkWgc`,
 			maxResults: 10,
 			order: "date",
 			publishedAfter: "2020-01-01T00:00:00Z",
@@ -16,18 +16,10 @@ function fetchAndSave() {
 			relevanceLanguage: "en-us",
 			type: ["video"],
 		})
-		// .then((res) => saveData(res.data.items))
-		// .catch((err) => {
-		// 	if (isQuotaExceeded(err)) {
-		// 		if (`AIzaSyBHx5sqpUeZ_F0PhnHLMgUJNfe_cSpkWgc`.split(",").length > apiKeyIndex) {
-		// 			console.log("Ran Out of APIKeys");
-		// 		} else {
-		// 			console.log("Trying with the next API key...");
-		// 			apiKeyIndex++;
-		// 		}
-		// 	}
-		// 	console.log(err);
-		// });
+		.then((res) => saveData(res.data.items))
+		.catch((err) => {
+			console.log(err);
+		});
 }
 
 // Function for checking whether the Quota is Exceeded or not
@@ -58,11 +50,11 @@ function saveData(items: any[]) {
 			title,
 			description,
 			publishedAt: Date.parse(publishedAt),
-			thumbnails: {
-				default: thumbnails.default.url,
-				medium: thumbnails.medium.url,
-				high: thumbnails.high.url,
-			},
+			// thumbnails: {
+			// 	default: thumbnails.default.url,
+			// 	medium: thumbnails.medium.url,
+			// 	high: thumbnails.high.url,
+			// },
 		});
 
 		return newYvid.save();
@@ -93,4 +85,4 @@ async function getYVideos(title: string = "", description: string = "") {
 
 export { fetchAndSave, getYVideos };
 
-// 
+// a
